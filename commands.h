@@ -12,6 +12,11 @@
 #define MAX_ARG 20
 int ExeComp(char* lineSize);
 int BgCmd(char* lineSize, void* jobs);
+<<<<<<< HEAD
+int ExeCmd(char* lineSize, char* cmdString);
+void ExeExternal(char *args[MAX_ARG], char* cmdString);
+
+=======
 int ExeCmd(void* jobs, char* lineSize, char* cmdString);
 void ExeExternal(char *args[MAX_ARG], char* cmdString);
 //Dror
@@ -22,5 +27,6 @@ typedef struct job
 	int pid;
 	time_t start_time;
 }job;
+>>>>>>> 5f6bdba4479b07cd4bc8cfc7d3349500bcc0d351
 #endif
 

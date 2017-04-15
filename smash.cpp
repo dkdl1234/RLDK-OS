@@ -17,9 +17,13 @@ using namespace std;//Dror
 #define MAXARGS 20
 
 char* L_Fg_Cmd;
+<<<<<<< HEAD
+char lineSize[MAX_LINE_SIZE]; 
+=======
 vector <job>  jobs; //= NULL; //This represents the list of jobs. Please change to a preferred type (e.g array of char*)
 char lineSize[MAX_LINE_SIZE]; 
 char father_wd[MAX_LINE_SIZE];//This represent the "father" directory of the current working dierctory (for "cd -" command)-Dror.
+>>>>>>> 5f6bdba4479b07cd4bc8cfc7d3349500bcc0d351
 //**************************************************************************************
 // function name: main
 // Description: main function of smash. get command from user and calls command functions
@@ -60,10 +64,14 @@ int main(int argc, char *argv[])
 		cmdString[strlen(lineSize)-1]='\0';
 		// perform a complicated Command
 		if(!ExeComp(lineSize)) continue; 
+<<<<<<< HEAD
+		ExeCmd(lineSize, cmdString);
+=======
 		// background command
 	 	if(!BgCmd(lineSize, jobs)) continue; 
 		// built in commands
 		ExeCmd(jobs, lineSize, cmdString);
+>>>>>>> 5f6bdba4479b07cd4bc8cfc7d3349500bcc0d351
 		
 		/* initialize for next line read*/
 		lineSize[0]='\0';
